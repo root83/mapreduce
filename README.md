@@ -1,8 +1,11 @@
 MapReduce Basic
 ==================
 
-Driver Class의 실행
+- Output 디렉토리 생성
+hadoop fs -mkdir -p /output
 
-hadoop fs -mkdir -p /output/result
+- Driver Class의 실행
+hadoop jar ~/test.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result
 
-hadoop jar ~/test.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result01/
+- Output 디렉토리 비우기
+hadoop fs -mkdir -p /output/*
