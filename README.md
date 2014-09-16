@@ -33,4 +33,4 @@ MapReduce Lecture
 
 - Driver Class의 실행
 
->hadoop jar ~/test01.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result01
+>hadoop jar ~/test01.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result01 -D numReduceTasks=3
