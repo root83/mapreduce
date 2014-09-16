@@ -19,6 +19,12 @@ MapReduce Basic
 
 <br>
 
+- 파일 내용보기
+
+>hadoop fs -cat /output/result01/part-r-00001
+
+<br>
+
 - Driver Class의 실행
 
->hadoop jar ~/test.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result
+>hadoop jar ~/test01.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result01
