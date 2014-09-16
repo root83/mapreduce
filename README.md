@@ -1,6 +1,12 @@
 MapReduce Lecture
 ==================
 
+- HDFS 계정 전환
+
+>su - hdfs
+
+<br>
+
 - Output 디렉토리 생성
 
 >hadoop fs -mkdir -p /output
