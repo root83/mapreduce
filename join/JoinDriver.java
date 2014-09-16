@@ -16,7 +16,7 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 public class JoinDriver extends Configured implements Tool {
 	@Override
-    public int run(String[] args) throws Exception {
+	public int run(String[] args) throws Exception {
 		Configuration conf = getConf();
 		
 		mapreduce01(conf);
@@ -36,17 +36,17 @@ public class JoinDriver extends Configured implements Tool {
 		MultipleInputs.addInputPath(job, new Path(conf.get("inputPath2")), TextInputFormat.class, JoinMapper2.class);
 		
 		job.setMapOutputKeyClass(TextPair.class);
-        job.setMapOutputValueClass(TextPair.class);
-        
+		job.setMapOutputValueClass(TextPair.class);
+		
 		job.setReducerClass(JoinReducer.class);
 		job.setOutputKeyClass(NullWritable.class);
-        job.setOutputValueClass(Text.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
-        
-        job.setPartitionerClass(TextPairPartitioner.class);
-        job.setGroupingComparatorClass(TextPair.FirstComparator.class);
-        
-        job.setNumReduceTasks(conf.getInt("numReduceTasks", 1));
+		job.setOutputValueClass(Text.class);
+		job.setOutputFormatClass(TextOutputFormat.class);
+		
+		job.setPartitionerClass(TextPairPartitioner.class);
+		job.setGroupingComparatorClass(TextPair.FirstComparator.class);
+		
+		job.setNumReduceTasks(conf.getInt("numReduceTasks", 1));
 		
 		if(!job.waitForCompletion(true)) {
 			throw new Exception("MapReduce Faild..");
@@ -64,15 +64,15 @@ public class JoinDriver extends Configured implements Tool {
 		
 		job.setMapperClass(CountMapper.class);
 		job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(Text.class);
-        job.setInputFormatClass(TextInputFormat.class);
-        
+		job.setMapOutputValueClass(Text.class);
+		job.setInputFormatClass(TextInputFormat.class);
+		
 		job.setReducerClass(CountReducer.class);
 		job.setOutputKeyClass(NullWritable.class);
-        job.setOutputValueClass(Text.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
-        
-        job.setNumReduceTasks(conf.getInt("numReduceTasks", 1));
+		job.setOutputValueClass(Text.class);
+		job.setOutputFormatClass(TextOutputFormat.class);
+		
+		job.setNumReduceTasks(conf.getInt("numReduceTasks", 1));
 		
 		if(!job.waitForCompletion(true)) {
 			throw new Exception("MapReduce Faild..");
