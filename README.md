@@ -1,4 +1,4 @@
-MapReduce Basic
+MapReduce Lecture
 ==================
 
 - Output 디렉토리 생성
