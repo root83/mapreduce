@@ -9,7 +9,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 public class CountReducer extends Reducer<Text, Text, NullWritable, Text> {
 	@Override
-    protected void setup(Context context) throws IOException, InterruptedException {
+	protected void setup(Context context) throws IOException, InterruptedException {
 		//Called once at the start of the task.
 		
 		Configuration conf = context.getConfiguration();
@@ -28,8 +28,7 @@ public class CountReducer extends Reducer<Text, Text, NullWritable, Text> {
 	}
 	
 	@Override
-    protected void cleanup(Context context) throws IOException, InterruptedException {
+	protected void cleanup(Context context) throws IOException, InterruptedException {
 		//Called once at the end of the task.
-		
 	}
 }
