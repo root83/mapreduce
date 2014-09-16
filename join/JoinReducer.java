@@ -7,9 +7,9 @@ import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class JoinReducer extends Reducer<TextPair, TextPair, NullWritable, Text> {	
+public class JoinReducer extends Reducer<TextPair, TextPair, NullWritable, Text> {
 	@Override
-    protected void setup(Context context) throws IOException, InterruptedException {
+	protected void setup(Context context) throws IOException, InterruptedException {
 		//Called once at the start of the task.
 		
 		Configuration conf = context.getConfiguration();
@@ -43,8 +43,7 @@ public class JoinReducer extends Reducer<TextPair, TextPair, NullWritable, Text>
 	}
 	
 	@Override
-    protected void cleanup(Context context) throws IOException, InterruptedException {
+	protected void cleanup(Context context) throws IOException, InterruptedException {
 		//Called once at the end of the task.
-		
 	}
 }
