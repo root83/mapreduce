@@ -33,7 +33,13 @@ MapReduce Lecture
 
 - HDFS의 파일을 Local로 다운로드
 
->hadoop fs -cat /output/result01/part-r-00001 result01.txt
+>hadoop fs -get /output/result01/part-r-00001 result01.txt
+
+<br>
+
+- HDFS의 파일을 병합하여 Local로 다운로드
+
+>hadoop fs -getmerge /output/result01 result01.txt
 
 <br>
 
