@@ -27,13 +27,13 @@ MapReduce Lecture
 
 - 파일 내용보기
 
->hadoop fs -cat /output/result01/part-r-00001
+>hadoop fs -cat /output/result01/part-r-00000
 
 <br>
 
 - HDFS의 파일을 Local로 다운로드
 
->hadoop fs -get /output/result01/part-r-00001 result01.txt
+>hadoop fs -get /output/result01/part-r-00000 result01.txt
 
 <br>
 
