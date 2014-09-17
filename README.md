@@ -21,7 +21,7 @@ MapReduce Lecture
 
 - 파일 덮어쓰기
 
->hadoop fs -copyFromLocal -f /upload
+>hadoop fs -copyFromLocal Accidents0513.csv -f /upload/acc
 
 <br>
 
