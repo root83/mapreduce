@@ -25,6 +25,12 @@ MapReduce Lecture
 
 <br>
 
+- HDFS 디렉토리 조회
+
+>hadoop fs -ls /output
+
+<br>
+
 - 파일 내용보기
 
 >hadoop fs -cat /output/result01/part-r-00000
