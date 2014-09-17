@@ -31,6 +31,12 @@ MapReduce Lecture
 
 <br>
 
+- HDFS의 파일을 Local로 다운로드
+
+>hadoop fs -cat /output/result01/part-r-00001 result01.txt
+
+<br>
+
 - Driver Class의 실행
 
 >hadoop jar ~/test01.jar skill.coach.TestDriver -D inputPath=/upload/acc/Accidents0513.csv -D outputPath=/output/result01 -D numReduceTasks=3
